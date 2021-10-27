@@ -135,6 +135,7 @@ void Test::testEnqueueEmptyQueue(void)
 	Queue eEmpty;
 	
 	cout << "Testing enqueue on an empty queue:" << endl;
+
 	if (eEmpty.isEmpty() == true)
 	{
 		cout << "Queue is Empty: " << endl;
@@ -161,7 +162,6 @@ void Test::testEnqueueEmptyQueue(void)
 		eEmpty.printQueueRecursive();
 		cout << endl;
 	}
-
 }
 
 void Test::testEnqueueOneNode(void)
@@ -170,6 +170,7 @@ void Test::testEnqueueOneNode(void)
 	eOne.enqueue(Data(1, 2, 3));
 
 	cout << "Testing enqueue on a queue with one node:" << endl;
+
 	if (eOne.isEmpty() == false)
 	{
 		cout << "Queue Has One Node: " << endl;
@@ -201,9 +202,9 @@ void Test::testEnqueueOneNode(void)
 void Test::testDequeueOneNode(void)
 {
 	Queue dOne;
+	dOne.enqueue(Data(1, 2, 3));
 
 	cout << "Testing dequeue on a queue with one node:" << endl;
-	dOne.enqueue(Data(1, 2, 3));
 
 	if (dOne.isEmpty() == false)
 	{
@@ -236,10 +237,10 @@ void Test::testDequeueOneNode(void)
 void Test::testDequeueTwoNodes(void)
 {
 	Queue dTwo;
-
-	cout << "Testing dequeue on a queue with two nodes:" << endl;
 	dTwo.enqueue(Data(1, 2, 3));
 	dTwo.enqueue(Data(4, 5, 6));
+
+	cout << "Testing dequeue on a queue with two nodes:" << endl;
 
 	if (dTwo.isEmpty() == false)
 	{

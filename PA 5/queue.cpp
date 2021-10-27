@@ -9,12 +9,14 @@ Queue::Queue(QueueNode* pNewHead, QueueNode* pNewTail)
 Queue::Queue(const Queue& copyQueue)
 {
 	
-	this->enqueue(new QueueNode(copyQueue.pHead->getData()))
 }
 
 Queue::~Queue()
 {
-
+	while (pHead != nullptr)
+	{
+		dequeue();
+	}
 }
 
 bool Queue::Queue::isEmpty() const

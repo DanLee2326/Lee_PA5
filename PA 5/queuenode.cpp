@@ -14,7 +14,7 @@ QueueNode::QueueNode(const QueueNode& copyQueueNode)
 
 QueueNode::~QueueNode()
 {
-	delete pData;
+	
 }
 
 void QueueNode::setNextPtr(QueueNode* const pNewNext)
