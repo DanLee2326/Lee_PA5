@@ -8,12 +8,13 @@ QueueNode::QueueNode(const Data& pNewData)
 
 QueueNode::QueueNode(const QueueNode& copyQueueNode)
 {
-
+	this->pData = copyQueueNode.getData();
+	this->pNext = copyQueueNode.getNextPtr();
 }
 
 QueueNode::~QueueNode()
 {
-
+	delete pData;
 }
 
 void QueueNode::setNextPtr(QueueNode* const pNewNext)

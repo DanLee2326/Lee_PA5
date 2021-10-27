@@ -9,6 +9,7 @@ Queue::Queue(QueueNode* pNewHead, QueueNode* pNewTail)
 Queue::Queue(const Queue& copyQueue)
 {
 	
+	this->enqueue(new QueueNode(copyQueue.pHead->getData()))
 }
 
 Queue::~Queue()
